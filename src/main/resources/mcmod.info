@@ -1,0 +1,16 @@
+[
+{
+  "modid": "pipes",
+  "name": "Pipes",
+  "description": "Simple piping mod. Cheaper alternative for moving items than hopper arrays.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LazyLazuli"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
