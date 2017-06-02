@@ -12,7 +12,7 @@ public class CommonProxy
 	{
 		Registry.registerBlocks(event, Pipes.PIPE, Pipes.PIPE_REVERSE);
 		GameRegistry.registerTileEntity(TileEntityPipe.class, "tileentitypipe");
-		GameRegistry.addRecipe(new ItemStack(Pipes.PIPE, 3), "III", 'I', Items.IRON_INGOT);
+		GameRegistry.addRecipe(new ItemStack(Pipes.PIPE, 1), "III", 'I', Items.IRON_INGOT);
 		Pipes.PIPE.setCreativeTab(CreativeTabs.REDSTONE);
 	}
 }
