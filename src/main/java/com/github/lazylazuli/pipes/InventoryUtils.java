@@ -195,11 +195,15 @@ public class InventoryUtils
 				stackInserted = true;
 			} else if (canCombine(stackInSlot, stack))
 			{
-				int spaceLeft = stackInSlot.getMaxStackSize() - stackInSlot.getCount();
-				int i = Math.min(stack.getCount(), spaceLeft);
-				stack.shrink(i);
-				stackInSlot.grow(i);
-				stackInserted = i > 0;
+				int spaceLeft = Math.min(stackInSlot.getMaxStackSize(), inv.getInventoryStackLimit()) - stackInSlot
+						.getCount();
+				if (spaceLeft > 0)
+				{
+					int i = Math.min(stack.getCount(), spaceLeft);
+					stack.shrink(i);
+					stackInSlot.grow(i);
+					stackInserted = i > 0;
+				}
 			}
 		}
 		
