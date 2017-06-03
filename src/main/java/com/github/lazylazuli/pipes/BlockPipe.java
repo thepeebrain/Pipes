@@ -119,6 +119,9 @@ public class BlockPipe extends BlockContainer
 		if (playerIn.getHeldItem(EnumHand.MAIN_HAND) != ItemStack.EMPTY)
 			return false;
 		
+		if (worldIn.isRemote)
+			return true;
+		
 		EnumFlow flow = EnumFlow.get(getInput(state), facing);
 		
 		if (flow != null)
