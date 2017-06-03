@@ -21,8 +21,11 @@ public final class Pipes
 	@SidedProxy(clientSide = Pipes.CLIENT_PROXY, serverSide = Pipes.COMMON_PROXY)
 	public static CommonProxy proxy;
 	
+	public static GuiHandler guiHandler = new GuiHandler();
+	
 	public static final BlockPipe PIPE = new BlockPipe("pipe", BlockPipe.NORMAL);
 	public static final BlockPipe PIPE_REVERSE = new BlockPipe("pipe_reverse", BlockPipe.REVERSE);
+	public static final BlockPipe PIPE_WINDOWED = new BlockWindowedPipe("pipe_windowed");
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)

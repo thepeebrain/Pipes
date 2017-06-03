@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockChest;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.ItemStack;
@@ -48,12 +49,22 @@ public class InventoryUtils
 		
 		if (inv == null)
 		{
-			List<Entity> list = world.getEntitiesInAABBexcluding(null, new AxisAlignedBB(x - 0.5D, y - 0.5D, z - 0.5D,
-					x + 0.5D, y + 0.5D, z + 0.5D), EntitySelectors.HAS_INVENTORY);
+			List<Entity> list = world.getEntitiesWithinAABB(Entity.class, new AxisAlignedBB(x - 0.5D, y - 0.5D, z -
+					0.5D, x + 0.5D, y + 0.5D, z + 0.5D), EntitySelectors.HAS_INVENTORY);
+			list.addAll(world.getEntitiesWithinAABB(EntityPlayer.class, new AxisAlignedBB(x - 0.5D, y - 0.5D, z -
+					0.5D, x + 0.5D, y + 0.5D, z + 0.5D)));
 			
 			if (!list.isEmpty())
 			{
-				inv = (IInventory) list.get(world.rand.nextInt(list.size()));
+				Entity entity = list.get(world.rand.nextInt(list.size()));
+				
+				if (entity instanceof EntityPlayer)
+				{
+					inv = ((EntityPlayer) entity).inventory;
+				} else
+				{
+					inv = (IInventory) list.get(world.rand.nextInt(list.size()));
+				}
 			}
 		}
 		

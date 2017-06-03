@@ -18,6 +18,9 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentString;
+import net.minecraft.util.text.TextComponentTranslation;
 import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
@@ -32,6 +35,7 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	private NonNullList<ItemStack> inventory = NonNullList.withSize(1, ItemStack.EMPTY);
 	private int transferCooldown = -1;
 	private long tickedGameTime;
+	private String customName;
 	
 	public EnumFacing getInput()
 	{
@@ -378,13 +382,13 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	@Override
 	public String getName()
 	{
-		return null;
+		return hasCustomName() ? customName : "container.pipe";
 	}
 	
 	@Override
 	public boolean hasCustomName()
 	{
-		return false;
+		return customName != null && !customName.isEmpty();
 	}
 	
 	@Override
@@ -478,6 +482,12 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	{
 		super.readFromNBT(compound);
 		ItemStackHelper.loadAllItems(compound, inventory);
+		
+		if (compound.hasKey("CustomName", 8))
+		{
+			customName = compound.getString("CustomName");
+		}
+		
 		transferCooldown = compound.getInteger("TransferCooldown");
 	}
 	
@@ -486,8 +496,25 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	{
 		super.writeToNBT(compound);
 		ItemStackHelper.saveAllItems(compound, inventory);
+		
+		if (hasCustomName())
+		{
+			compound.setString("CustomName", customName);
+		}
+		
 		compound.setInteger("TransferCooldown", transferCooldown);
 		
 		return compound;
+	}
+	
+	@Override
+	public ITextComponent getDisplayName()
+	{
+		return hasCustomName() ? new TextComponentString(getName()) : new TextComponentTranslation(getName());
+	}
+	
+	public void setCustomName(String name)
+	{
+		this.customName = name;
 	}
 }

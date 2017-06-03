@@ -36,7 +36,6 @@ public class BlockPipe extends BlockContainer
 	public static final PropertyEnum<EnumFlow> REVERSE = PropertyEnum.create("flow", EnumFlow.class, flow -> flow
 			.ordinal() >= 15);
 	
-	
 	protected static final AxisAlignedBB DN_AABB = new AxisAlignedBB(0.375D, 0.0D, 0.0D, 0.625D, 0.5D, 0.625D);
 	protected static final AxisAlignedBB DS_AABB = new AxisAlignedBB(0.375D, 0.0D, 0.375D, 0.625D, 0.5D, 1.0D);
 	
@@ -136,7 +135,7 @@ public class BlockPipe extends BlockContainer
 		return other == Pipes.PIPE || other == Pipes.PIPE_REVERSE;
 	}
 	
-	private IBlockState constructStateFromFlow(EnumFlow flow)
+	protected IBlockState constructStateFromFlow(EnumFlow flow)
 	{
 		if (flow == null)
 			flow = EnumFlow.DE;
@@ -292,5 +291,22 @@ public class BlockPipe extends BlockContainer
 		BlockPipe block = (BlockPipe) state.getBlock();
 		return state.getValue(block.flow)
 					.getOutput();
+	}
+	
+	@Override
+	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack
+			stack)
+	{
+		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+		
+		if (stack.hasDisplayName())
+		{
+			TileEntity te = worldIn.getTileEntity(pos);
+			
+			if (te instanceof TileEntityPipe)
+			{
+				((TileEntityPipe) te).setCustomName(stack.getDisplayName());
+			}
+		}
 	}
 }
