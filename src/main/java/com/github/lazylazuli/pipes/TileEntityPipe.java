@@ -477,17 +477,16 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	public void readFromNBT(NBTTagCompound compound)
 	{
 		super.readFromNBT(compound);
-		inventory = NonNullList.withSize(getSizeInventory(), ItemStack.EMPTY);
-		
-		this.transferCooldown = compound.getInteger("TransferCooldown");
+		ItemStackHelper.loadAllItems(compound, inventory);
+		transferCooldown = compound.getInteger("TransferCooldown");
 	}
 	
 	@Override
 	public NBTTagCompound writeToNBT(NBTTagCompound compound)
 	{
 		super.writeToNBT(compound);
-		
-		compound.setInteger("TransferCooldown", this.transferCooldown);
+		ItemStackHelper.saveAllItems(compound, inventory);
+		compound.setInteger("TransferCooldown", transferCooldown);
 		
 		return compound;
 	}
