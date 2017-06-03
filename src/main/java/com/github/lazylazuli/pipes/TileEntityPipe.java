@@ -1,6 +1,7 @@
 package com.github.lazylazuli.pipes;
 
 import net.minecraft.block.BlockHopper;
+import net.minecraft.block.state.IBlockState;
 import net.minecraft.dispenser.IPosition;
 import net.minecraft.dispenser.PositionImpl;
 import net.minecraft.entity.item.EntityItem;
@@ -16,6 +17,8 @@ import net.minecraft.tileentity.TileEntityHopper;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.ITickable;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
@@ -330,6 +333,13 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 	}
 	
 	public long getLastUpdateTime() { return tickedGameTime; } // Forge
+	
+	@Override
+	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newSate)
+	{
+		return !oldState.getBlock()
+						.isAssociatedBlock(newSate.getBlock());
+	}
 	
 	// IINVENTORY
 	
