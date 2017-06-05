@@ -1,7 +1,7 @@
 [
 {
-  "modid": "pipes",
-  "name": "Lazy Lazuli's Pipes",
+  "modid": "${modid}",
+  "name": "${modname}",
   "description": "Simple piping mod. Cheaper alternative for moving items than hopper arrays.",
   "version": "${version}",
   "mcversion": "${mcversion}",
@@ -9,8 +9,8 @@
   "updateUrl": "",
   "authorList": ["LazyLazuli"],
   "credits": "",
-  "logoFile": "https://media-elerium.cursecdn.com/avatars/101/26/636319859729413426.png",
+  "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["lazylazulilib"]
 }
 ]

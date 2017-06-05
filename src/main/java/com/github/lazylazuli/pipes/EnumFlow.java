@@ -75,7 +75,9 @@ public enum EnumFlow implements IStringSerializable
 		for (EnumFlow flow : EnumFlow.values())
 		{
 			if (flow.input == input && flow.output == output)
+			{
 				return flow;
+			}
 		}
 		return null;
 	}

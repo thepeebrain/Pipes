@@ -17,17 +17,25 @@ import net.minecraft.world.World;
 import javax.annotation.Nullable;
 import java.util.List;
 
+import static com.github.lazylazuli.pipes.EnumFlow.DU;
+import static com.github.lazylazuli.pipes.EnumFlow.EW;
+import static com.github.lazylazuli.pipes.EnumFlow.NS;
+import static com.github.lazylazuli.pipes.EnumFlow.SN;
+import static com.github.lazylazuli.pipes.EnumFlow.UD;
+import static com.github.lazylazuli.pipes.EnumFlow.WE;
+
 public class BlockWindowedPipe extends BlockPipe
 {
-	public static final PropertyEnum<EnumFlow> FLOW = PropertyEnum.create("flow", EnumFlow.class, EnumFlow.DU,
-			EnumFlow.NS, EnumFlow.WE, EnumFlow.UD, EnumFlow.SN, EnumFlow.EW);
+	public static final PropertyEnum<EnumFlow> FLOW = PropertyEnum.create("flow", EnumFlow.class,
+			DU, NS, WE, UD, SN, EW
+	);
 	
 	public BlockWindowedPipe(String name)
 	{
 		super(name, FLOW);
 		setUnlocalizedName("pipe_windowed");
 		setDefaultState(blockState.getBaseState()
-								  .withProperty(flow, EnumFlow.DU));
+								  .withProperty(flow, DU));
 	}
 	
 	@Override
@@ -35,7 +43,7 @@ public class BlockWindowedPipe extends BlockPipe
 	{
 		if (!FLOW.getAllowedValues()
 				 .contains(flow))
-			flow = EnumFlow.NS;
+			flow = NS;
 		return getDefaultState().withProperty(FLOW, flow);
 	}
 	
@@ -47,8 +55,8 @@ public class BlockWindowedPipe extends BlockPipe
 	
 	@Override
 	public void addCollisionBoxToList(IBlockState state, World worldIn, BlockPos pos, AxisAlignedBB entityBox,
-									  List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean
-												  p_185477_7_)
+			List<AxisAlignedBB> collidingBoxes, @Nullable Entity entityIn, boolean
+			p_185477_7_)
 	{
 		addCollisionBoxToList(pos, entityBox, collidingBoxes, X_AABB);
 		addCollisionBoxToList(pos, entityBox, collidingBoxes, Y_AABB);
@@ -88,7 +96,7 @@ public class BlockWindowedPipe extends BlockPipe
 	
 	@Override
 	public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY,
-											float hitZ, int meta, EntityLivingBase placer)
+			float hitZ, int meta, EntityLivingBase placer)
 	{
 		EnumFacing out = facing;
 		EnumFacing in = facing.getOpposite();
