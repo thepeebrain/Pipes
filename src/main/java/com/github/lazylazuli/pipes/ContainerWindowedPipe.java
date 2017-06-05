@@ -15,6 +15,8 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
+import static com.github.lazylazuli.lazylazulilib.InventoryUtils.getInventoryAtPosition;
+
 public class ContainerWindowedPipe extends Container
 {
 	public ContainerWindowedPipe(TileEntityPipe te)
@@ -35,8 +37,9 @@ public class ContainerWindowedPipe extends Container
 	
 	private void addViewingSlotForSide(TileEntityPipe te, EnumFacing side, int x, int y)
 	{
-		IInventory inv = InventoryUtils.getInventoryAtPosition(te.getWorld(), te.getXPos() + side.getFrontOffsetX(),
-				te.getYPos() + side.getFrontOffsetY(), te.getZPos() + side.getFrontOffsetZ());
+		IInventory inv = getInventoryAtPosition(te.getWorld(), te.getXPos() + side.getFrontOffsetX(),
+				te.getYPos() + side.getFrontOffsetY(), te.getZPos() + side.getFrontOffsetZ()
+		);
 		if (inv != null)
 		{
 			if (inv instanceof TileEntityPipe)

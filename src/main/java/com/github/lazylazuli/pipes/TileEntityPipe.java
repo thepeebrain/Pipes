@@ -25,10 +25,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-import static com.github.lazylazuli.pipes.InventoryUtils.canExtractItemFromSlot;
-import static com.github.lazylazuli.pipes.InventoryUtils.getInventoryAtPosition;
-import static com.github.lazylazuli.pipes.InventoryUtils.isInventoryEmpty;
-import static com.github.lazylazuli.pipes.InventoryUtils.isInventoryFull;
+import static com.github.lazylazuli.lazylazulilib.InventoryUtils.*;
 
 public class TileEntityPipe extends TileEntity implements IHopper, ITickable, ISidedInventory
 {
@@ -233,7 +230,7 @@ public class TileEntityPipe extends TileEntity implements IHopper, ITickable, IS
 			EnumFacing side)
 	{
 		boolean wasEmpty = invTo.isEmpty();
-		boolean didTransfer = InventoryUtils.insertStack(invTo, stack, side);
+		boolean didTransfer = insertStack(invTo, stack, side);
 		
 		if (didTransfer && wasEmpty)
 		{
