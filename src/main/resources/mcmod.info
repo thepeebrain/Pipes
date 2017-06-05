@@ -12,6 +12,7 @@
   "logoFile": "",
   "screenshots": [],
   "requiredMods": ["lazylazulilib"],
-  "dependencies": ["lazylazulilib"]
+  "dependencies": ["lazylazulilib"],
+  "useDependencyInformation": true
 }
 ]

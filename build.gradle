@@ -1,6 +1,6 @@
 def modid = "pipes"
 def modname = "Lazy Lazuli's Pipes"
-def modversion = "1.5.2"
+def modversion = "1.5.3"
 def mcversion = "1.11.2"
 def libVersion = "$mcversion-1.1.1"
 def forgeversion = "13.20.0.2228"
