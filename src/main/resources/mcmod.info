@@ -6,13 +6,9 @@
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "https://minecraft.curseforge.com/projects/lazy-lazulis-pipes",
-  "updateUrl": "",
   "authorList": ["LazyLazuli"],
-  "credits": "",
-  "logoFile": "",
-  "screenshots": [],
+  "useDependencyInformation": true,
   "requiredMods": ["lazylazulilib"],
-  "dependencies": ["lazylazulilib"],
-  "useDependencyInformation": true
+  "dependencies": ["lazylazulilib"]
 }
 ]
