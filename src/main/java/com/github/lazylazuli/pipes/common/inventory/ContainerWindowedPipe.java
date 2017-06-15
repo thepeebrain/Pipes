@@ -1,6 +1,6 @@
-package com.github.lazylazuli.pipes;
+package com.github.lazylazuli.pipes.common.inventory;
 
-
+import com.github.lazylazuli.pipes.common.tile.TileEntityPipe;
 import net.minecraft.entity.item.EntityMinecartChest;
 import net.minecraft.entity.item.EntityMinecartHopper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,7 +15,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
-import static com.github.lazylazuli.lazylazulilib.InventoryUtils.getInventoryAtPosition;
+import static com.github.lazylazuli.lib.common.inventory.InventoryUtils.getInventoryAtPosition;
 
 public class ContainerWindowedPipe extends Container
 {

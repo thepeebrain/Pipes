@@ -1,5 +1,8 @@
-package com.github.lazylazuli.pipes;
+package com.github.lazylazuli.pipes.common.network;
 
+import com.github.lazylazuli.pipes.common.inventory.ContainerWindowedPipe;
+import com.github.lazylazuli.pipes.client.gui.inventory.GuiWindowedPipe;
+import com.github.lazylazuli.pipes.common.tile.TileEntityPipe;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;

@@ -1,5 +1,6 @@
-package com.github.lazylazuli.pipes;
+package com.github.lazylazuli.pipes.common.tile;
 
+import com.github.lazylazuli.pipes.common.block.BlockPipe;
 import net.minecraft.block.BlockHopper;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.dispenser.IPosition;
@@ -25,7 +26,7 @@ import net.minecraft.world.World;
 
 import javax.annotation.Nullable;
 
-import static com.github.lazylazuli.lazylazulilib.InventoryUtils.*;
+import static com.github.lazylazuli.lib.common.inventory.InventoryUtils.*;
 
 public class TileEntityPipe extends TileEntity implements IHopper, ITickable, ISidedInventory
 {

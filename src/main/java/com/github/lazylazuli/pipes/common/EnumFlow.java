@@ -1,4 +1,4 @@
-package com.github.lazylazuli.pipes;
+package com.github.lazylazuli.pipes.common;
 
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.IStringSerializable;

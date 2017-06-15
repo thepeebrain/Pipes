@@ -5,7 +5,7 @@
       "particle": "blocks/hopper_outside",
       "all": "blocks/hopper_outside"
     },
-    "model": "pipes:pipe_windowed",
+    "model": "lazylazulipipes:pipe_windowed",
     "uvlock": true
   },
   "variants": {
@@ -13,21 +13,21 @@
       "downup": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_bottom_input"
+            "model": "lazylazulipipes:pipe_bottom_input"
           },
           "output": {
-            "model": "pipes:pipe_top_output"
+            "model": "lazylazulipipes:pipe_top_output"
           }
         }
       },
       "northsouth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 180
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 180
           }
         }
@@ -35,11 +35,11 @@
       "westeast": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 90
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 90
           }
         }
@@ -47,31 +47,31 @@
       "updown": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_top_input"
+            "model": "lazylazulipipes:pipe_top_input"
           },
           "output": {
-            "model": "pipes:pipe_bottom_output"
+            "model": "lazylazulipipes:pipe_bottom_output"
           }
         }
       },
       "southnorth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input"
+            "model": "lazylazulipipes:pipe_horizontal_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output"
+            "model": "lazylazulipipes:pipe_horizontal_output"
           }
         }
       },
       "eastwest": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 270
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 270
           }
         }

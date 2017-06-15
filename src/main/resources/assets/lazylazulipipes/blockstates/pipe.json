@@ -5,7 +5,7 @@
       "particle": "blocks/hopper_outside",
       "all": "blocks/hopper_outside"
     },
-    "model": "pipes:pipe_center",
+    "model": "lazylazulipipes:pipe_center",
     "uvlock": true
   },
   "variants": {
@@ -13,30 +13,30 @@
       "downup": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_bottom_input"
+            "model": "lazylazulipipes:pipe_bottom_input"
           },
           "output": {
-            "model": "pipes:pipe_top_output"
+            "model": "lazylazulipipes:pipe_top_output"
           }
         }
       },
       "downnorth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_bottom_input"
+            "model": "lazylazulipipes:pipe_bottom_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output"
+            "model": "lazylazulipipes:pipe_horizontal_output"
           }
         }
       },
       "downsouth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_bottom_input"
+            "model": "lazylazulipipes:pipe_bottom_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 180
           }
         }
@@ -44,20 +44,20 @@
       "upnorth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_top_input"
+            "model": "lazylazulipipes:pipe_top_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output"
+            "model": "lazylazulipipes:pipe_horizontal_output"
           }
         }
       },
       "upsouth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_top_input"
+            "model": "lazylazulipipes:pipe_top_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 180
           }
         }
@@ -65,11 +65,11 @@
       "northsouth": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 180
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 180
           }
         }
@@ -77,11 +77,11 @@
       "northwest": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 180
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 270
           }
         }
@@ -89,11 +89,11 @@
       "northeast": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 180
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 90
           }
         }
@@ -101,10 +101,10 @@
       "southwest": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input"
+            "model": "lazylazulipipes:pipe_horizontal_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 270
           }
         }
@@ -112,10 +112,10 @@
       "southeast": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input"
+            "model": "lazylazulipipes:pipe_horizontal_input"
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 90
           }
         }
@@ -123,11 +123,11 @@
       "westeast": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 90
           },
           "output": {
-            "model": "pipes:pipe_horizontal_output",
+            "model": "lazylazulipipes:pipe_horizontal_output",
             "y": 90
           }
         }
@@ -135,44 +135,44 @@
       "westdown": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 90
           },
           "output": {
-            "model": "pipes:pipe_bottom_output"
+            "model": "lazylazulipipes:pipe_bottom_output"
           }
         }
       },
       "westup": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 90
           },
           "output": {
-            "model": "pipes:pipe_top_output"
+            "model": "lazylazulipipes:pipe_top_output"
           }
         }
       },
       "eastdown": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 270
           },
           "output": {
-            "model": "pipes:pipe_bottom_output"
+            "model": "lazylazulipipes:pipe_bottom_output"
           }
         }
       },
       "eastup": {
         "submodel": {
           "input": {
-            "model": "pipes:pipe_horizontal_input",
+            "model": "lazylazulipipes:pipe_horizontal_input",
             "y": 270
           },
           "output": {
-            "model": "pipes:pipe_top_output"
+            "model": "lazylazulipipes:pipe_top_output"
           }
         }
       }

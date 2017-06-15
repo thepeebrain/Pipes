@@ -1,11 +1,13 @@
-package com.github.lazylazuli.pipes;
+package com.github.lazylazuli.pipes.client.gui.inventory;
 
+import com.github.lazylazuli.pipes.common.inventory.ContainerWindowedPipe;
+import com.github.lazylazuli.pipes.common.tile.TileEntityPipe;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiWindowedPipe extends GuiContainer
 {
-	ResourceLocation texture = new ResourceLocation("pipes", "textures/gui/container/pipe.png");
+	ResourceLocation texture = new ResourceLocation("lazylazulipipes", "textures/gui/container/pipe.png");
 	TileEntityPipe te;
 	
 	public GuiWindowedPipe(TileEntityPipe te)

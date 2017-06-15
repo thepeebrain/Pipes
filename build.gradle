@@ -11,19 +11,31 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle.forge'
 //Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 
-def modid = "lazylazulipipes"
-def modname = "Lazy Lazuli's Pipes"
+ext {
+	modid = "lazylazulipipes"
+	modname = "Lazy Lazuli's Pipes"
 
-def modfile = 'Pipes.java'
+	modfile = "Pipes.java"
 
-def mcversion = "1.11.2"
-def forgeversion = "13.20.0.2228"
-def libVersion = "$mcversion-2.0.0-2"
-def modversion = "1.5.3"
+	mcversion = "1.12"
+	forgeversion = "14.21.0.2327"
+	libVersion = "$mcversion-2.0.0-41"
+	modversion = "2.0.0"
 
-def update = "https://github.com/lazylazuli/Pipes/releases/download/Latest/update.json"
+	getBuildNumber = { ->
+		stdout = new ByteArrayOutputStream()
+		exec {
+			commandLine 'git', 'rev-list', '1.11.2', '--count'
+			standardOutput = stdout
+		}
+		return stdout.toString().trim()
+	}
+	buildnumber = 22
 
-version = "$mcversion-$modversion"
+	update = "https://github.com/lazylazuli/Pipes/releases/download/Latest/update.json"
+}
+
+version = "$mcversion-$modversion-$buildnumber"
 group = "com.github.lazylazuli.pipes"
 archivesBaseName = modid
 
