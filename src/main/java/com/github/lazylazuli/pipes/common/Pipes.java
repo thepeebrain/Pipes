@@ -27,6 +27,12 @@ public final class Pipes extends LazyLazuliMod
 	public static Proxy proxy;
 	
 	@Override
+	public String getId()
+	{
+		return MODID;
+	}
+	
+	@Override
 	public Proxy getProxy()
 	{
 		return proxy;

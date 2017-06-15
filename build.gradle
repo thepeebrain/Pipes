@@ -19,18 +19,18 @@ ext {
 
 	mcversion = "1.12"
 	forgeversion = "14.21.0.2327"
-	libVersion = "$mcversion-2.0.0-41"
+	libVersion = "$mcversion-2.0.0-45"
 	modversion = "2.0.0"
 
 	getBuildNumber = { ->
 		stdout = new ByteArrayOutputStream()
 		exec {
-			commandLine 'git', 'rev-list', '1.11.2', '--count'
+			commandLine 'git', 'rev-list', 'master', '--count'
 			standardOutput = stdout
 		}
 		return stdout.toString().trim()
 	}
-	buildnumber = 22
+	buildnumber = 21
 
 	update = "https://github.com/lazylazuli/Pipes/releases/download/Latest/update.json"
 }
