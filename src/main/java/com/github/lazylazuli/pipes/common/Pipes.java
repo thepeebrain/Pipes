@@ -38,7 +38,7 @@ public final class Pipes extends LazyLazuliMod
 		return proxy;
 	}
 	
-	public static final GuiHandler GUI_HANDLER = new GuiHandler();
+	static final GuiHandler GUI_HANDLER = new GuiHandler();
 	
 	@Override
 	@Mod.EventHandler

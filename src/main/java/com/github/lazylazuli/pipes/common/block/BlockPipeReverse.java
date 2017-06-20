@@ -1,30 +1,30 @@
 package com.github.lazylazuli.pipes.common.block;
 
-import com.github.lazylazuli.pipes.common.EnumFlow;
+import com.github.lazylazuli.pipes.common.util.EnumIO;
+import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.IBlockState;
 
-public class BlockPipeReverse extends BlockPipe
+import javax.annotation.ParametersAreNonnullByDefault;
+
+@MethodsReturnNonnullByDefault
+@ParametersAreNonnullByDefault
+public class BlockPipeReverse extends BlockPipeNormal
 {
-	public static final PropertyEnum<EnumFlow> REVERSE = PropertyEnum.create("flow", EnumFlow.class,
-			flow -> flow != null && flow.ordinal() >= 15
-	);
-	
 	public BlockPipeReverse(String name, String unlocalizedName)
 	{
 		super(name, unlocalizedName);
-		setCreativeTab(null);
 	}
 	
 	@Override
-	public PropertyEnum<EnumFlow> getFlowProperty()
+	public PropertyEnum<EnumIO> getFlowProperty()
 	{
-		return REVERSE;
+		return FLOW_REVERSE;
 	}
 	
 	@Override
 	public IBlockState getStateFromMeta(int meta)
 	{
-		return constructStateFromFlow(EnumFlow.values()[meta + 15]);
+		return IBlockIO.constructStateFromFlow(this, EnumIO.values()[meta + 15]);
 	}
 }

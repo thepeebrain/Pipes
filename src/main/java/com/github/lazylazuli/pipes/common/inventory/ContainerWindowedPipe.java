@@ -1,6 +1,6 @@
 package com.github.lazylazuli.pipes.common.inventory;
 
-import com.github.lazylazuli.pipes.common.tile.TileEntityPipe;
+import com.github.lazylazuli.pipes.common.tile.TilePipe;
 import net.minecraft.entity.item.EntityMinecartChest;
 import net.minecraft.entity.item.EntityMinecartHopper;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,11 +15,13 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 
+import javax.annotation.Nullable;
+
 import static com.github.lazylazuli.lib.common.inventory.InventoryUtils.getInventoryAtPosition;
 
 public class ContainerWindowedPipe extends Container
 {
-	public ContainerWindowedPipe(TileEntityPipe te)
+	public ContainerWindowedPipe(TilePipe te)
 	{
 		addSlotToContainer(new Slot(te, 0, 79, 78)
 		{
@@ -30,21 +32,26 @@ public class ContainerWindowedPipe extends Container
 			}
 		});
 		
-		addViewingSlotForSide(te, te.getInput(), 31, 78);
-		addViewingSlotForSide(te, te.getOutput(), 127, 78);
+		addViewingSlotForSide(te, te.getInput(), 31);
+		addViewingSlotForSide(te, te.getOutput(), 127);
 		
 	}
 	
-	private void addViewingSlotForSide(TileEntityPipe te, EnumFacing side, int x, int y)
+	private void addViewingSlotForSide(TilePipe te, EnumFacing side, int x)
 	{
-		IInventory inv = getInventoryAtPosition(te.getWorld(), te.getXPos() + side.getFrontOffsetX(),
-				te.getYPos() + side.getFrontOffsetY(), te.getZPos() + side.getFrontOffsetZ()
+		int y = 78;
+		
+		IInventory inv = getInventoryAtPosition(
+				te.getWorld(),
+				te.getXPos() + side.getFrontOffsetX(),
+				te.getYPos() + side.getFrontOffsetY(),
+				te.getZPos() + side.getFrontOffsetZ()
 		);
 		if (inv != null)
 		{
-			if (inv instanceof TileEntityPipe)
+			if (inv instanceof TilePipe)
 			{
-				addSlotToContainer(createViewingSlot(inv, 0, x, y));
+				addSlotToContainer(createViewingSlot(inv, x, y));
 			} else
 			{
 				IInventory dummy = new InventoryBasic("", false, 1);
@@ -53,8 +60,11 @@ public class ContainerWindowedPipe extends Container
 				if (inv instanceof TileEntity)
 				{
 					TileEntity te1 = te.getWorld()
-									   .getTileEntity(new BlockPos(te.getXPos() + side.getFrontOffsetX(), te.getYPos()
-											   + side.getFrontOffsetY(), te.getZPos() + side.getFrontOffsetZ()));
+									   .getTileEntity(new BlockPos(
+											   te.getXPos() + side.getFrontOffsetX(),
+											   te.getYPos() + side.getFrontOffsetY(),
+											   te.getZPos() + side.getFrontOffsetZ()
+									   ));
 					if (te1 != null)
 					{
 						stack = new ItemStack(te1.getBlockType());
@@ -73,14 +83,14 @@ public class ContainerWindowedPipe extends Container
 				}
 				
 				dummy.setInventorySlotContents(0, stack);
-				addSlotToContainer(createViewingSlot(dummy, 0, x, y));
+				addSlotToContainer(createViewingSlot(dummy, x, y));
 			}
 		}
 	}
 	
-	private Slot createViewingSlot(IInventory inv, int index, int x, int y)
+	private Slot createViewingSlot(IInventory inv, int x, int y)
 	{
-		return new Slot(inv, index, x, y)
+		return new Slot(inv, 0, x, y)
 		{
 			@Override
 			public boolean canTakeStack(EntityPlayer playerIn)
@@ -91,7 +101,7 @@ public class ContainerWindowedPipe extends Container
 	}
 	
 	@Override
-	public boolean canInteractWith(EntityPlayer playerIn)
+	public boolean canInteractWith(@Nullable EntityPlayer playerIn)
 	{
 		return true;
 	}

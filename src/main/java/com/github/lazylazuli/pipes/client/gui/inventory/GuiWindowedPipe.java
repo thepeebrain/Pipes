@@ -1,16 +1,19 @@
 package com.github.lazylazuli.pipes.client.gui.inventory;
 
 import com.github.lazylazuli.pipes.common.inventory.ContainerWindowedPipe;
-import com.github.lazylazuli.pipes.common.tile.TileEntityPipe;
+import com.github.lazylazuli.pipes.common.tile.TilePipe;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.ITextComponent;
 
 public class GuiWindowedPipe extends GuiContainer
 {
-	ResourceLocation texture = new ResourceLocation("lazylazulipipes", "textures/gui/container/pipe.png");
-	TileEntityPipe te;
+	private final ResourceLocation texture = new ResourceLocation("lazylazulipipes",
+			"textures/gui/container/pipe" + ".png"
+	);
+	private final TilePipe te;
 	
-	public GuiWindowedPipe(TileEntityPipe te)
+	public GuiWindowedPipe(TilePipe te)
 	{
 		super(new ContainerWindowedPipe(te));
 		this.te = te;
@@ -26,9 +29,13 @@ public class GuiWindowedPipe extends GuiContainer
 	@Override
 	protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY)
 	{
-		String s = te.getDisplayName()
-					 .getUnformattedText();
-		fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 61, 4210752);
+		ITextComponent text = te.getDisplayName();
+		
+		if (text != null)
+		{
+			String s = text.getFormattedText();
+			fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 61, 4210752);
+		}
 	}
 	
 	@Override

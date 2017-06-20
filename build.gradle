@@ -5,7 +5,7 @@ buildscript {
 	}
 
 	dependencies {
-		classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+		classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
 	}
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
@@ -18,8 +18,8 @@ ext {
 	modfile = "Pipes.java"
 
 	mcversion = "1.12"
-	forgeversion = "14.21.0.2327"
-	libVersion = "$mcversion-2.0.0-45"
+	forgeversion = "14.21.0.2331"
+	libVersion = "$mcversion-2.0.0-56"
 	modversion = "2.0.0"
 
 	getBuildNumber = { ->

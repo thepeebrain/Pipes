@@ -12,7 +12,6 @@ public class ClientProxy extends CommonProxy
 	{
 		super.preInit(event);
 		
-		setModelResource(PipeObjects.PIPE);
-		setModelResource(PipeObjects.PIPE_WINDOWED);
+		setModelResourceFor(PipeObjects.PIPE, PipeObjects.PIPE_WINDOWED);
 	}
 }
