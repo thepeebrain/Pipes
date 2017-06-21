@@ -34,7 +34,7 @@ public class GuiWindowedPipe extends GuiContainer
 		if (text != null)
 		{
 			String s = text.getFormattedText();
-			fontRendererObj.drawString(s, xSize / 2 - fontRendererObj.getStringWidth(s) / 2, 61, 4210752);
+			fontRenderer.drawString(s, xSize / 2 - fontRenderer.getStringWidth(s) / 2, 61, 4210752);
 		}
 	}
 	
