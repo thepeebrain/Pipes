@@ -20,7 +20,7 @@ public final class Pipes extends LazyLazuliMod
 	public static final String MCVERSION = "1.12";
 	
 	public static final String VERSION = "2.0.0";
-	public static final String BUILD = "21";
+	public static final String BUILD = "31";
 	
 	public static final String UPDATE = "https://github.com/lazylazuli/Pipes/releases/download/Latest/update.json";
 	
