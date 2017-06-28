@@ -25,6 +25,17 @@ public class CommonProxy extends com.github.lazylazuli.lib.common.CommonProxy im
 	}
 	
 	@Override
+	protected Block[] getBlocksForTab(CreativeTabs tab)
+	{
+		if (tab == CreativeTabs.REDSTONE)
+			return new Block[] {
+					PIPE,
+					PIPE_WINDOWED
+			};
+		return new Block[0];
+	}
+	
+	@Override
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		NetworkRegistry.INSTANCE.registerGuiHandler(Pipes.instance, Pipes.GUI_HANDLER);
@@ -35,7 +46,7 @@ public class CommonProxy extends com.github.lazylazuli.lib.common.CommonProxy im
 	public Block[] getBlocksForRegistry()
 	{
 		return new Block[] {
-				new BlockPipeNormal("pipe").setCreativeTab(CreativeTabs.REDSTONE),
+				new BlockPipeNormal("pipe"),
 				new BlockPipeReverse("pipe_reverse", "pipe"),
 				new BlockPipeWindowed("pipe_windowed")
 		};

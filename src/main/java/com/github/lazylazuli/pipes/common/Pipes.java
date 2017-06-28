@@ -5,6 +5,7 @@ import com.github.lazylazuli.lib.common.Proxy;
 import com.github.lazylazuli.pipes.common.network.GuiHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Pipes.MODID,
@@ -54,5 +55,12 @@ public final class Pipes extends LazyLazuliMod
 	public void preInit(FMLPreInitializationEvent event)
 	{
 		super.preInit(event);
+	}
+	
+	@Override
+	@Mod.EventHandler
+	public void init(FMLInitializationEvent event)
+	{
+		super.init(event);
 	}
 }
