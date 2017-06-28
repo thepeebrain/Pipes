@@ -84,6 +84,6 @@ public interface IBlockIO
 			return other.getDefaultState().withProperty(property, flow);
 		}
 		
-		throw new IllegalStateException("This should not have happened!");
+		throw new IllegalStateException(String.format("Failed to construct state from flow: %s", flow));
 	}
 }
