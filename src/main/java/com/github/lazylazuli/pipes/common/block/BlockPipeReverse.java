@@ -1,5 +1,6 @@
 package com.github.lazylazuli.pipes.common.block;
 
+import com.github.lazylazuli.pipes.common.PipeObjects;
 import com.github.lazylazuli.pipes.common.util.EnumIO;
 import mcp.MethodsReturnNonnullByDefault;
 import net.minecraft.block.properties.PropertyEnum;
@@ -14,6 +15,12 @@ public class BlockPipeReverse extends BlockPipeNormal
 	public BlockPipeReverse(String name, String unlocalizedName)
 	{
 		super(name, unlocalizedName);
+	}
+	
+	@Override
+	public BlockPipeNormal getAssociatedBlock()
+	{
+		return PipeObjects.PIPE;
 	}
 	
 	@Override
