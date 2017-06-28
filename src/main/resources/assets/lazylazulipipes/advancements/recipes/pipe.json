@@ -1,0 +1,31 @@
+{
+	"parent": "lazylazulipipes:recipes/root",
+	"rewards": {
+		"recipes": [
+			"lazylazulipipes:pipe"
+		]
+	},
+	"criteria": {
+		"has_hopper": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "minecraft:hopper"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "lazylazulipipes:pipe"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_hopper", "has_the_recipe"
+		]
+	]
+}

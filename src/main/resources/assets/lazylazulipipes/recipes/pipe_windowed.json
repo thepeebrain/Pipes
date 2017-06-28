@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"group": "pipe_windowed",
+	"ingredients": [
+		{
+			"item": "lazylazulipipes:pipe"
+		}, {
+			"item": "minecraft:glass_pane"
+		}
+	],
+	"result": {
+		"item": "lazylazulipipes:pipe_windowed",
+		"data": 0,
+		"count": 1
+	}
+}

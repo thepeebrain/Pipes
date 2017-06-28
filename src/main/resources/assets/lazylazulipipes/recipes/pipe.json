@@ -1,0 +1,16 @@
+{
+	"type": "forge:ore_shaped",
+	"group": "pipe",
+	"pattern": [ "XXX" ],
+	"key": {
+		"X": {
+			"ore": "ingotIron",
+			"type": "forge:ore_dict"
+		}
+	},
+	"result": {
+		"item": "lazylazulipipes:pipe",
+		"data": 0,
+		"count": 3
+	}
+}

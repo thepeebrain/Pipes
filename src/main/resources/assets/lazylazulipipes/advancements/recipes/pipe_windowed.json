@@ -1,0 +1,31 @@
+{
+	"parent": "lazylazulipipes:recipes/root",
+	"rewards": {
+		"recipes": [
+			"lazylazulipipes:pipe_windowed"
+		]
+	},
+	"criteria": {
+		"has_pipe": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "lazylazulipipes:pipe"
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "lazylazulipipes:pipe_windowed"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_pipe", "has_the_recipe"
+		]
+	]
+}
