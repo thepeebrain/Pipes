@@ -59,12 +59,11 @@ public class ContainerWindowedPipe extends Container
 				
 				if (inv instanceof TileEntity)
 				{
-					TileEntity te1 = te.getWorld()
-									   .getTileEntity(new BlockPos(
-											   te.getXPos() + side.getFrontOffsetX(),
-											   te.getYPos() + side.getFrontOffsetY(),
-											   te.getZPos() + side.getFrontOffsetZ()
-									   ));
+					TileEntity te1 = te.getWorld().getTileEntity(new BlockPos(
+							te.getXPos() + side.getFrontOffsetX(),
+							te.getYPos() + side.getFrontOffsetY(),
+							te.getZPos() + side.getFrontOffsetZ()
+					));
 					if (te1 != null)
 					{
 						stack = new ItemStack(te1.getBlockType());
@@ -78,8 +77,7 @@ public class ContainerWindowedPipe extends Container
 				} else if (inv instanceof InventoryPlayer)
 				{
 					stack = new ItemStack(Items.SKULL, 1, 3);
-					stack.setStackDisplayName(inv.getDisplayName()
-												 .getUnformattedText());
+					stack.setStackDisplayName(inv.getDisplayName().getUnformattedText());
 				}
 				
 				dummy.setInventorySlotContents(0, stack);

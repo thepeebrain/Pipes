@@ -25,8 +25,7 @@ public class TilePipe extends TileStackTransferer
 	@Override
 	public boolean shouldRefresh(World world, BlockPos pos, IBlockState oldState, IBlockState newSate)
 	{
-		return !oldState.getBlock()
-						.isAssociatedBlock(newSate.getBlock());
+		return !oldState.getBlock().isAssociatedBlock(newSate.getBlock());
 	}
 	
 	// TileInventory

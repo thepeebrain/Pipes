@@ -28,8 +28,7 @@ public class BlockPipeWindowed extends BlockPipeBase
 	public BlockPipeWindowed(String name)
 	{
 		super(name);
-		setDefaultState(blockState.getBaseState()
-								  .withProperty(getFlowProperty(), DU));
+		setDefaultState(blockState.getBaseState().withProperty(getFlowProperty(), DU));
 	}
 	
 	@Override
@@ -61,8 +60,7 @@ public class BlockPipeWindowed extends BlockPipeBase
 	@Override
 	public int getMetaFromState(IBlockState state)
 	{
-		return state.getValue(getFlowProperty())
-					.getId() / 5;
+		return state.getValue(getFlowProperty()).getId() / 5;
 	}
 	
 	@Override

@@ -19,6 +19,11 @@ import static com.github.lazylazuli.pipes.common.PipeObjects.PIPE_WINDOWED;
 
 public class CommonProxy extends com.github.lazylazuli.lib.common.CommonProxy implements BlockRegistry, ItemRegistry
 {
+	public CommonProxy()
+	{
+		super(Pipes.instance);
+	}
+	
 	@Override
 	public void preInit(FMLPreInitializationEvent event)
 	{

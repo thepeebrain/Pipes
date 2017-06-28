@@ -25,13 +25,13 @@ repositories {
 }
 
 dependencies {
-	compile "com.github.lazylazuli:LazyLazuliLib:master-SNAPSHOT"
+	compile "com.github.lazylazuli:LazyLazuliLib:1.12-2.0.0"
 }
 
 minecraft {
-	version = "1.12-14.21.0.2340"
+	version = "1.12-14.21.0.2382"
 	runDir = "run"
-	mappings = "snapshot_20170617"
+	mappings = "snapshot_20170624"
 }
 
 processResources {

@@ -2,16 +2,14 @@ package com.github.lazylazuli.pipes.client;
 
 import com.github.lazylazuli.pipes.common.CommonProxy;
 import com.github.lazylazuli.pipes.common.PipeObjects;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ClientProxy extends CommonProxy
 {
-	
-	@Override
-	public void preInit(FMLPreInitializationEvent event)
+	@SubscribeEvent
+	public void registerModels(ModelRegistryEvent event)
 	{
-		super.preInit(event);
-		
 		setModelResourceFor(PipeObjects.PIPE, PipeObjects.PIPE_WINDOWED);
 	}
 }

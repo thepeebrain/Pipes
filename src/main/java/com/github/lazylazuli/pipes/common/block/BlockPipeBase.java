@@ -37,10 +37,8 @@ public abstract class BlockPipeBase extends BlockBase implements IBlockPipe, ITi
 		setResistance(8);
 		setSoundType(SoundType.METAL);
 		setDefaultState(blockState.getBaseState()
-								  .withProperty(
-										  getFlowProperty(),
-										  (EnumIO) getFlowProperty().getAllowedValues()
-																	.toArray()[0]
+								  .withProperty(getFlowProperty(),
+										  (EnumIO) getFlowProperty().getAllowedValues().toArray()[0]
 								  ));
 	}
 	

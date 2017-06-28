@@ -22,9 +22,7 @@ public interface IBlockIO
 	);
 	
 	PropertyEnum<EnumIO> FLOW_REVERSE = PropertyEnum.create("flow",
-			EnumIO.class,
-			flow -> !FLOW_NORMAL.getAllowedValues()
-								.contains(flow)
+			EnumIO.class, flow -> !FLOW_NORMAL.getAllowedValues().contains(flow)
 	);
 	
 	PropertyEnum<EnumIO> FLOW_STRAIGHT = PropertyEnum.create("flow", EnumIO.class, DU, NS, WE, UD, SN, EW);
@@ -67,11 +65,9 @@ public interface IBlockIO
 	{
 		PropertyEnum<EnumIO> property = block.getFlowProperty();
 		
-		if (property.getAllowedValues()
-					.contains(flow))
+		if (property.getAllowedValues().contains(flow))
 		{
-			return block.getDefaultState()
-						.withProperty(property, flow);
+			return block.getDefaultState().withProperty(property, flow);
 		}
 		
 		B other = block.getAssociatedBlock();
@@ -83,11 +79,9 @@ public interface IBlockIO
 		
 		property = other.getFlowProperty();
 		
-		if (property.getAllowedValues()
-					.contains(flow))
+		if (property.getAllowedValues().contains(flow))
 		{
-			return other.getDefaultState()
-						.withProperty(property, flow);
+			return other.getDefaultState().withProperty(property, flow);
 		}
 		
 		throw new IllegalStateException("This should not have happened!");

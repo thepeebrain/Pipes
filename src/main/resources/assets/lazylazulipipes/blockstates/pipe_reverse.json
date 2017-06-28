@@ -1,179 +1,179 @@
 {
-  "forge_marker": 1,
-  "defaults": {
-    "textures": {
-      "particle": "blocks/hopper_outside",
-      "all": "blocks/hopper_outside"
-    },
-    "model": "lazylazulipipes:pipe_center",
-    "uvlock": true
-  },
-  "variants": {
-    "flow": {
-      "updown": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_top_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_bottom_output"
-          }
-        }
-      },
-      "northdown": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 180
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_bottom_output"
-          }
-        }
-      },
-      "southdown": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_bottom_output"
-          }
-        }
-      },
-      "northup": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 180
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_top_output"
-          }
-        }
-      },
-      "southup": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_top_output"
-          }
-        }
-      },
-      "southnorth": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output"
-          }
-        }
-      },
-      "westnorth": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 90
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output"
-          }
-        }
-      },
-      "eastnorth": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 270
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output"
-          }
-        }
-      },
-      "westsouth": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 90
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 180
-          }
-        }
-      },
-      "eastsouth": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 270
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 180
-          }
-        }
-      },
-      "eastwest": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_horizontal_input",
-            "y": 270
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 270
-          }
-        }
-      },
-      "downwest": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_bottom_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 270
-          }
-        }
-      },
-      "upwest": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_top_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 270
-          }
-        }
-      },
-      "downeast": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_bottom_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 90
-          }
-        }
-      },
-      "upeast": {
-        "submodel": {
-          "input": {
-            "model": "lazylazulipipes:pipe_top_input"
-          },
-          "output": {
-            "model": "lazylazulipipes:pipe_horizontal_output",
-            "y": 90
-          }
-        }
-      }
-    }
-  }
+	"forge_marker": 1,
+	"defaults": {
+		"textures": {
+			"particle": "blocks/hopper_outside",
+			"all": "blocks/hopper_outside"
+		},
+		"model": "lazylazulipipes:pipe_center",
+		"uvlock": true
+	},
+	"variants": {
+		"flow": {
+			"updown": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_top_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_bottom_output"
+					}
+				}
+			},
+			"northdown": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 180
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_bottom_output"
+					}
+				}
+			},
+			"southdown": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_bottom_output"
+					}
+				}
+			},
+			"northup": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 180
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_top_output"
+					}
+				}
+			},
+			"southup": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_top_output"
+					}
+				}
+			},
+			"southnorth": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output"
+					}
+				}
+			},
+			"westnorth": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 90
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output"
+					}
+				}
+			},
+			"eastnorth": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 270
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output"
+					}
+				}
+			},
+			"westsouth": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 90
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 180
+					}
+				}
+			},
+			"eastsouth": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 270
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 180
+					}
+				}
+			},
+			"eastwest": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_horizontal_input",
+						"y": 270
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 270
+					}
+				}
+			},
+			"downwest": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_bottom_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 270
+					}
+				}
+			},
+			"upwest": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_top_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 270
+					}
+				}
+			},
+			"downeast": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_bottom_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 90
+					}
+				}
+			},
+			"upeast": {
+				"submodel": {
+					"input": {
+						"model": "lazylazulipipes:pipe_top_input"
+					},
+					"output": {
+						"model": "lazylazulipipes:pipe_horizontal_output",
+						"y": 90
+					}
+				}
+			}
+		}
+	}
 }
