@@ -2,11 +2,9 @@
 	"forge_marker": 1,
 	"defaults": {
 		"textures": {
-			"particle": "blocks/hopper_outside",
-			"all": "blocks/hopper_outside"
+			"center": "lazylazulipipes:blocks/pipe_windowed"
 		},
-		"model": "lazylazulipipes:pipe_windowed",
-		"uvlock": true
+		"model": "lazylazulipipes:pipe_center"
 	},
 	"variants": {
 		"flow": {
