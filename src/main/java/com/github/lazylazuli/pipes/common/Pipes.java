@@ -1,8 +1,9 @@
 package com.github.lazylazuli.pipes.common;
 
-import com.github.lazylazuli.lib.common.LazyLazuliMod;
-import com.github.lazylazuli.lib.common.Proxy;
+import com.github.lazylazuli.lib.common.mod.LazyLazuliMod;
+import com.github.lazylazuli.lib.common.mod.Proxy;
 import com.github.lazylazuli.pipes.common.network.GuiHandler;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -31,9 +32,12 @@ public final class Pipes extends LazyLazuliMod
 				serverSide = "com.github.lazylazuli.pipes.common.CommonProxy")
 	public static Proxy proxy;
 	
-	public Pipes()
+	@Mod.InstanceFactory
+	public static Pipes initializeMod()
 	{
-		instance = this;
+		Pipes mod = new Pipes();
+		MinecraftForge.EVENT_BUS.register(mod);
+		return mod;
 	}
 	
 	@Override

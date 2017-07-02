@@ -1,8 +1,7 @@
 package com.github.lazylazuli.pipes.common;
 
 import com.github.lazylazuli.lib.common.item.ItemBlockBase;
-import com.github.lazylazuli.lib.common.registry.BlockRegistry;
-import com.github.lazylazuli.lib.common.registry.ItemRegistry;
+import com.github.lazylazuli.lib.common.mod.Proxy;
 import com.github.lazylazuli.pipes.common.block.BlockPipeNormal;
 import com.github.lazylazuli.pipes.common.block.BlockPipeReverse;
 import com.github.lazylazuli.pipes.common.block.BlockPipeWindowed;
@@ -13,26 +12,29 @@ import net.minecraft.item.Item;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import static com.github.lazylazuli.pipes.common.PipeObjects.PIPE;
 import static com.github.lazylazuli.pipes.common.PipeObjects.PIPE_WINDOWED;
 
-public class CommonProxy extends com.github.lazylazuli.lib.common.CommonProxy implements BlockRegistry, ItemRegistry
+public class CommonProxy extends Proxy
 {
-	public CommonProxy()
+	private final Logger log = LogManager.getLogger(Pipes.MODID);
+	
+	@Override
+	protected Logger getLogger()
 	{
-		super(Pipes.instance);
+		return log;
 	}
 	
 	@Override
 	protected Block[] getBlocksForTab(CreativeTabs tab)
 	{
-		if (tab == CreativeTabs.REDSTONE)
-			return new Block[] {
-					PIPE,
-					PIPE_WINDOWED
-			};
-		return new Block[0];
+		return tab == CreativeTabs.REDSTONE ? new Block[] {
+				PIPE,
+				PIPE_WINDOWED
+		} : new Block[0];
 	}
 	
 	@Override
