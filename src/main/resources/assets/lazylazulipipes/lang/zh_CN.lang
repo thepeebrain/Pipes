@@ -1,0 +1,4 @@
+tile.pipe.name=管道
+tile.pipe_windowed.name=开窗管道
+
+container.pipe=管道
